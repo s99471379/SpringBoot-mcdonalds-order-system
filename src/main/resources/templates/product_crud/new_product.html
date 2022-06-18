@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"   xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="http://127.0.0.1:8080/imgs/myownstyle.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <title>後台管理</title>
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="images/favicon.png" type="">
+
+            <!-- bootstrap core css -->
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+            <!--owl slider stylesheet -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+            <!-- nice select  -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+            <!-- font awesome style -->
+            <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+            <!-- Custom styles for this template -->
+            <link href="css/style.css" rel="stylesheet" />
+            <!-- responsive style -->
+            <link href="css/responsive.css" rel="stylesheet" />
+    </head>
+    <body class="sub_page">
+        <div class="hero_area">
+            <div class="bg-box">
+                <img src="images/hero-bg.jpg" alt="">
+            </div>
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container ">
+                        <a class="navbar-brand" href="/">
+                            <span>
+                                McDonald's
+                            </span>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""> </span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav  mx-auto ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/product_crud">維護</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/showNewProductForm">新增產品<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/showFormForUpdate/p-j-101">編輯產品</a>
+                                </li>
+                            </ul>
+                            <div class="user_option">
+                                <a href="/" class="order_online">
+                                    登出
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+    </body>   
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-2">
+                    <br>
+                    <h1>新增產品</h1>
+
+                    <form action="/createProduct" th:object="${product}" method="POST">
+
+                        <text>產品編號：</text><input type="text" th:field="*{product_id}" class="form-control mb-4 col-4"/>
+                        <text>產品名稱：</text><input type="text" th:field="*{name}" placeholder="" class="form-control mb-4 col-4"/>
+                        <text>產品類別：</text><input type="text" th:field="*{category}" placeholder="" class="form-control mb-4 col-4"/>
+                        <text>價格：</text><input type="text" th:field="*{price}" class="form-control mb-4 col-4"/>
+                        <text>圖片名稱：</text><input type="text" th:field="*{photo}" placeholder="輸入圖片檔案名稱" class="form-control mb-4 col-4"/>
+                        <text>描述：</text><input type="text" th:field="*{description}" placeholder="" class="form-control mb-4 col-4"/>
+                        <button type="submit" class="btn btn-primary">新增</button>
+                    </form>
+                        <br>
+                        <a href="/product_crud"><button class="btn btn-danger">回上一頁</button></a>
+                </div><!-- column -->
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </body>
+
+</html>
+
+<!-- 
+網頁會變成純HTML碼
+<form action="/createProduct" method="POST">
+    <input type="text" class="form-control mb-4 col-4" id="product_id" name="product_id" value="p-j-000"/>
+    <input type="text" placeholder="" class="form-control mb-4 col-4" id="name" name="name" value="花草茶??"/>
+    <input type="text" placeholder="" class="form-control mb-4 col-4" id="category" name="category" value="茶飲"/>
+    <input type="text" class="form-control mb-4 col-4" id="price" name="price" value="95"/>
+    <input type="text" placeholder="輸入圖片檔案名稱" class="form-control mb-4 col-4" id="photo" name="photo" value=""/>
+    <input type="text" placeholder="" class="form-control mb-4 col-4" id="description" name="description" value="英式口味 風味獨特"/>
+    <button type="submit" class="btn btn-info col-2">新增</button>
+</form>
+-->

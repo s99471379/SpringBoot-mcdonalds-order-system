@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"   xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="images/favicon.png" type="">
+
+            <title>菜單</title>
+
+            <!-- bootstrap core css -->
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+            <!--owl slider stylesheet -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+            <!-- nice select  -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+            <!-- font awesome style -->
+            <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+            <!-- Custom styles for this template -->
+            <link href="css/style.css" rel="stylesheet" />
+            <!-- responsive style -->
+            <link href="css/responsive.css" rel="stylesheet" />
+
+    </head>
+    <body class="sub_page">
+        <div class="hero_area">
+            <div class="bg-box">
+                <img src="images/hero-bg.jpg" alt="">
+            </div>
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container ">
+                        <a class="navbar-brand" href="/">
+                            <span>
+                                McDonald's
+                            </span>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""> </span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav  mx-auto ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">首頁</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/order">菜單<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/about">關於</a>
+                                </li>
+                            </ul>
+                            <div class="user_option">
+                                <a href="/product_crud" class="user_link">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </a>
+                                <a class="cart_link" href="/cart">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                                      c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                                      C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                                      c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                                      C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                                      c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="/check" class="order_online">
+                                    結帳
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+    </body>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- show product -->
+                <div class="col-lg-9 mb-2">
+                    <div id="menuDisplay">
+                    </div>
+
+                </div> <!-- product list column -->
+
+                <!-- 過濾條件 -->
+
+                <div class="col-lg-3 mb-2">
+
+                    <div class="row">
+
+                        <!-- query criteria  card -->
+                        <div class="col-lg-12 mb-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="h6 text-uppercase mb-0">篩選條件</h3>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <!-- Search form -->
+                                            <form  action="/searchProductByName" class="form-group">
+                                                <div class="input-group mb-2">
+
+                                                    <input type="search" name="name" class="form-control" placeholder="名稱關鍵字"/>
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <!-- Search form -->
+                                            <form  th:action="@{/searchProductByPrice}" class="form-group">
+                                                <div class="input-group mb-2">
+
+                                                    <input type="search" name="price" class="form-control" placeholder="單價低於..."/>
+
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <!-- 種類 -->
+                                            <form  action="/searchProductByCate" class="form-group">
+
+                                                <div class="input-group">
+                                                    <select name="category" class="form-control">
+                                                        <option selected>單點</option>
+                                                        <option>配餐</option>
+                                                    </select>
+
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+
+                                                </div>
+
+                                            </form>
+                                        </div><!-- column -->
+
+                                    </div> <!-- row -->
+                                </div><!-- card body -->
+                            </div><!-- card -->
+
+                        </div><!-- column -->
+                        <!-- query criteria area -->
+
+                        <!--cart  content -->
+                        <div class="col-lg-12 mb-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="h6 text-uppercase mb-0">購物車</h3>
+                                </div>
+                                <div class="card-body">
+
+                                    <div id="cartContent" class="text-right">
+
+                                    </div>
+
+                                </div><!-- card body -->
+                            </div><!-- card -->
+
+                        </div><!-- column -->
+                        <!-- cart  content -->
+
+                    </div><!-- row in right column -->
+                </div><!-- 過濾條件 column -->
+
+
+
+            </div><!-- row in right column -->
+        </div><!-- right column -->
+
+        </div> <!-- row -->
+        </div><!-- container -->
+        <!-- Copyright -->
+        <div id="copyright">
+            <div class="container">
+                <div class="site-info">
+                    </br></br></br><font color = black><center><span style="font-family:Microsoft JhengHei;">
+                                <font size="3"> 最佳瀏覽環境:<a href="https://www.google.com.tw/chrome/browser/desktop/">Google Chrome</a> 網頁設計 By <a href="https://www.minemoon.org/">s99471379</a> </br></font>
+                                <font size="3">(C) Copyright s99471379 Taiwan All Right Reserved.</font>
+                            </font></center></span>
+                </div><!-- .site-info -->
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var linkc = document.querySelector('#linkc') 
+            var cc = document.querySelector('#cc') 
+            function to(toEl) 
+            {    
+            let bridge = toEl;   
+            let body = document.body;    
+            let height = 0;        
+            do {      
+            height += bridge.offsetTop;      
+            bridge = bridge.offsetParent;    
+            } 
+            while (bridge !== body)
+                    window.scrollTo({      top: height, 
+                                 behavior: 'smooth'    })   
+            }
+    linkc.addEventListener('click', function () {
+        to(cc)
+      });</script>
+
+<script>
+
+    // 字串格式函數 先載入 讓後面的程式可以使用
+    //Customize the String.format()
+    //reference: https://www.cnblogs.com/taoweiji/p/3260883.html
+
+    // let result = "{0}----{1}".format("xx","yy")
+    String.prototype.format = function () {
+    var result = this;
+    if (arguments.length == 0)
+            return null;
+    for (var i = 0; i < arguments.length; i++) {
+    var re = new RegExp('\\{' + (i) + '\\}', 'gm');
+    result = result.replace(re, arguments[i]);
+    }
+    return result;
+    };
+    // Another alternative way
+    // let result = String.format("{0}  {1}", "Apple","Pineapple")
+    String.format = function () {
+    if (arguments.length == 0)
+            return null;
+    var str = arguments[0];
+    for (var i = 1; i < arguments.length; i++) {
+    var re = new RegExp('\\{' + (i - 1) + '\\}', 'gm');
+    str = str.replace(re, arguments[i]);
+    }
+    return str;
+    };</script>
+
+
+<script th:inline="javascript">
+
+    let products = [[${products
+    }
+    ]];
+    //console.log(products);
+
+    // 顯示產品項目
+    const new_div = document.createElement('div');
+    new_div.className = 'row'; //要成為這樣: <div class="row"></div>
+
+    for (let i = 0; i < products.length; i++) {
+
+    let html_snippet = `
+                            <div class="col-md-3 col-sm-4 mt-2 mb-2">
+                                <a href="#">
+                                    <img height="100" width="120" class="rounded mb-md-0" src="http://127.0.0.1:8080/imgs/{0}">
+                                </a>
+
+                                <h5>{1} $ {2}</h5>
+        
+                                <form  action="/addToCart"  method="POST" class="form-group">
+                                    <div class="input-group">
+                                            <select name="quantity" class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <button type="submit" class="btn btn-warning">+</button>
+                                            <input type="hidden" name="prod_id" value={3} />
+                                    </div>
+                                </form>
+        
+                            </div>`;
+    //填入資料
+    html_snippet = html_snippet.format(products[i].photo, products[i].name, products[i].price, products[i].product_id);
+    new_div.innerHTML += html_snippet;
+    }
+
+    // 一個大區塊附加上去
+    document.getElementById('menuDisplay').appendChild(new_div);
+    // 顯示 購物內容與總價
+    let items = [[${
+    session.cart
+    }
+    ]];
+    //const cartContent = document.getElementById('cartContent'); //
+
+    let sum = 0;
+    let snippet = "";
+    for (let i = 0; i < items.length; i++) {
+    let elem = String.format('<p>{2}x {0}  ${1}元 </p>', items[i].product_name, items[i].product_price, items[i].quantity);
+    //let elem = '<p>{0}  ${1}x{2}</p>'.format(items[i].product_name, items[i].product_price, items[i].quantity);
+    sum += items[i].product_price * items[i].quantity;
+    snippet += elem;
+    }
+    $('#cartContent').append(snippet);
+    $('#cartContent').append("<h4>總金額: $" + sum + "</h4>");
+
+</script>

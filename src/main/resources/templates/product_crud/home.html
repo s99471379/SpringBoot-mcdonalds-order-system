@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"   xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="http://127.0.0.1:8080/imgs/myownstyle.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <title>後台管理</title>
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="images/favicon.png" type="">
+
+            <!-- bootstrap core css -->
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+            <!--owl slider stylesheet -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+            <!-- nice select  -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+            <!-- font awesome style -->
+            <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+            <!-- Custom styles for this template -->
+            <link href="css/style.css" rel="stylesheet" />
+            <!-- responsive style -->
+            <link href="css/responsive.css" rel="stylesheet" />
+    </head>
+    <body class="sub_page">
+        <div class="hero_area">
+            <div class="bg-box">
+                <img src="images/hero-bg.jpg" alt="">
+            </div>
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container ">
+                        <a class="navbar-brand" href="/">
+                            <span>
+                                McDonald's
+                            </span>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""> </span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav  mx-auto ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">首頁</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/product_crud">維護 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/showNewProductForm">新增產品</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/showFormForUpdate/p-j-101">編輯產品</a>
+                                </li>
+                            </ul>
+                            <div class="user_option">
+                                <a href="/" class="order_online">
+                                    登出
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+    </body>    
+    <body>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 mb-2">
+                    <br>
+                    <h1>產品管理</h1>
+
+                    <table border="0" class="table table-striped table-responsive-md">
+                        <thead>
+                            <tr>
+                                <th>產編</th>
+                                <th>類別</th>
+                                <th>名稱</th>
+                                <th>價格</th>
+                                <th>圖片</th>
+                                <th>描述</th>
+                                <th>動作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="prod : ${listProducts}">
+
+                                <td th:text="${prod.product_id}"></td>
+                                <td th:text="${prod.category}"></td>
+                                <td th:text="${prod.getName()}"></td>
+                                <td th:text="${prod.price}"></td>
+                                <td><img th:src="'http://127.0.0.1:8080/imgs/'+${prod.photo}" width="120"></td>
+                                <td th:text="${prod.description}"></td>
+                                </p>
+                                <td> 
+                                    <div class="btn-group" role="group">
+
+                                        <!-- 寫法1 -->
+                                        <a th:href="@{/showFormForUpdate/{pid}(pid=${prod.product_id})}" class="btn btn-success btn-sm mr-1">修改</a>
+                                        <!-- 寫法1 使用GET傳遞產品編號 後端使用@RequestPath抓取路徑參數的方式
+                                        <a th:href="@{/showFormForUpdate/{pid}(pid=${prod.product_id})}" class="btn btn-primary mr-2">修改</a>
+                                        -->
+
+                                        <!-- 寫法2 -->
+                                        <!-- 寫法2 使用GET傳遞產品編號 後端使用@RequestParam抓取參數的方式 
+                                        <a th:href="@{/showFormForUpdate/(pid=${prod.product_id})}" class="btn btn-primary mr-2">修改</a>
+                                        -->
+
+
+                                        <!-- 寫法A
+                                        <a th:href="@{/deleteProduct/{prodid}(prodid=${prod.product_id})}" class="btn btn-danger" onclick="return confirm('確定要刪除?')">刪除</a>
+                                        翻譯為:
+                                        <a href="/deleteProduct/p-j-101" class="btn btn-danger" onclick="return confirm('確定要刪除?')">刪除</a>
+                                        -->
+                                        <!-- 寫法D -->
+                                        <form th:action="@{/deleteProduct}" method="post">
+                                            <input type="hidden" name="product_id" th:value="${prod.product_id}"/>
+                                            <input type="hidden" name="name" value="沒有名稱，名稱不重要!"/>
+                                            <button type="submit" class="btn btn-danger btn-sm ml-1" onclick="return confirm('確定要刪除?')">刪除</button>
+                                        </form>
+
+                                        <!-- 寫法D 使用Post 回傳產品編號name = product_id 其它值都是空的 給後端 -->
+                                        <!-- 後端會透過注入的方式，拿到name的值 name="product_id" 等，注入物件中 -->
+                                        <!--
+                                        <form th:action="@{/deleteProduct}" method="post">
+                                            <input type="hidden" name="product_id" th:value="${prod.product_id}"/>
+                                            <input type="hidden" name="name" value="沒有名稱，名稱不重要!"/>
+                                            <button type="submit" class="btn btn-danger ml-2" onclick="return confirm('確定要刪除?')">刪除</button>
+                                        </form>
+
+                                        ***********************
+                                        翻譯為: 具有name屬性
+                                        <form action="/deleteProduct" method="post">
+                                            <input type="hidden" name="product_id" value="p-j-000"/>
+                                            <input type="hidden" name="name" value="沒有名稱，名稱不重要!"/>
+                                            <button type="submit" class="btn btn-danger ml-2" onclick="return confirm('確定要刪除?')">刪除</button>
+                                        </form>
+                                        -->
+                                    </div> <!-- class="btn-group" -->
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div><!-- column -->
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </body>
+
+</html>
