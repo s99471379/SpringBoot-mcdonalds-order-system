@@ -16,7 +16,7 @@ This project is a simple side project built using **Spring Boot** to simulate an
 ## Technology Stack
 
 - **Backend**: Spring Boot
-- **Database**: H2 Database (or any preferred database supported by Spring Boot)
+- **Database**: MySQL
 - **Build Tool**: Maven
 - **Deployment**: Standalone Spring Boot Application
 
@@ -27,7 +27,7 @@ This project is a simple side project built using **Spring Boot** to simulate an
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<your-username>/SpringBoot-mcdonalds-order-system.git
+   git clone https://github.com/s99471379/SpringBoot-mcdonalds-order-system.git
    cd SpringBoot-mcdonalds-order-system
    ```
 
@@ -51,22 +51,8 @@ This project is a simple side project built using **Spring Boot** to simulate an
 
 Below is a preview of the initial structure of the repository:
 
-![Project Structure](path-to-your-uploaded-image.png)
-
----
-
-## Roadmap
-
-- Add frontend integration using React or Angular.
-- Enhance order management system with a payment gateway simulation.
-- Add user authentication and role-based access.
-- Deploy the application on cloud services.
-
----
-
-## Contributing
-
-Contributions are welcome! Please feel free to open an issue or submit a pull request for any feature you’d like to add or bugs you'd like to fix.
+![Project Structure](https://github.com/s99471379/SpringBoot-mcdonalds-order-system/blob/main/demo/%E9%A6%96%E9%A0%81.png?raw=true)
+![Project Structure](https://github.com/s99471379/SpringBoot-mcdonalds-order-system/blob/main/demo/%E9%BB%9E%E9%A4%90.png?raw=true)
 
 ---
 
